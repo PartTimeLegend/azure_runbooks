@@ -21,3 +21,11 @@ resource "azurerm_automation_runbook" "tmp_automation_runbook" {
     uri = "https://www.microsoft.com" # Placeholder as Azure is dumb
   }
 }
+
+
+resource "azurerm_automation_job_schedule" "automation_job_schedule" {
+  resource_group_name     = azurerm_resource_group.rgautomation.name
+  automation_account_name = azurerm_automation_account.automation_account.name
+  schedule_name           = azurerm_automation_schedule.automation_schedule.name
+  runbook_name            = azurerm_automation_runbook.tmp_automation_runbook.name
+}

@@ -36,3 +36,12 @@ resource "azurerm_automation_module" "az_resources" {
     azurerm_automation_module.az_accounts
   ]
 }
+
+resource "azurerm_automation_schedule" "automation_schedule" {
+  name                    = "as-sixhours-${local.az_region_abbrv}"
+  resource_group_name     = azurerm_resource_group.rgautomation.name
+  automation_account_name = azurerm_automation_account.automation_account.name
+  frequency               = "Hour"
+  interval                = 6
+  description             = "Runs every 6 hours"
+}
