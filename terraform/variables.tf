@@ -2,6 +2,7 @@ variable "az_region" {
   type    = string
   default = "UK South"
 }
+
 variable "az_region_abbr_map" {
   type        = map(any)
   description = "Map is used to obtain 3 letter azure region abreviation for naming resources"
@@ -22,7 +23,7 @@ variable "az_region_abbr_map" {
     "US Sec East"            = "usse"
     "US Sec West"            = "ussw"
     "Canada Central"         = "cc"
-    "Canade East"            = "ce"
+    "Canada East"            = "ce"
     "Brazil South"           = "bs"
     "North Europe"           = "eun"
     "West Europe"            = "euw"
@@ -57,6 +58,7 @@ variable "az_region_abbr_map" {
     "UAE North"              = "un"
   }
 }
+
 variable "automation_rg_name" {
   type    = string
   default = "rg-automation"
@@ -67,7 +69,7 @@ variable "automation_account_name" {
   default = "aaa-automation"
 }
 
-variable "automation_runbook_name" {
+variable "cert_end_date" {
   type    = string
-  default = "rb-automation"
+  default = "2021-06-14T16:23:21Z"
 }
