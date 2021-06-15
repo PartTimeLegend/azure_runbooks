@@ -23,9 +23,9 @@ resource "azurerm_automation_runbook" "tmp_automation_runbook" {
 }
 
 
-resource "azurerm_automation_job_schedule" "automation_job_schedule" {
+resource "azurerm_automation_job_schedule" "removetmpresources_automation_job_schedule" {
   resource_group_name     = azurerm_resource_group.rgautomation.name
   automation_account_name = azurerm_automation_account.automation_account.name
-  schedule_name           = azurerm_automation_schedule.automation_schedule.name
+  schedule_name           = azurerm_automation_schedule.automation_schedule_sixhours.name
   runbook_name            = azurerm_automation_runbook.tmp_automation_runbook.name
 }

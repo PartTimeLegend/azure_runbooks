@@ -66,10 +66,10 @@ variable "automation_rg_name" {
 
 variable "automation_account_name" {
   type    = string
-  default = "aaa-automation"
+  default = "aa-automation"
 }
 
 variable "cert_end_date" {
   type    = string
-  default = "2021-06-14T16:23:21Z"
+  default = "2021-06-14T15:29:26Z"
 }

@@ -17,3 +17,7 @@ output "service_principal" {
 output "tmp_runbook_name" {
   value = azurerm_automation_runbook.tmp_automation_runbook.name
 }
+
+output "skuupordown_runbook_name" {
+  value = azurerm_automation_runbook.skuupordown_automation_runbook.name
+}
